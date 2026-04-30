@@ -2116,6 +2116,109 @@
       .projects__grid {
         grid-template-columns: 1fr;
       }
+
+      /* Horizontal accordion: thumb + title + chevron, expand for details */
+      .project-card {
+        display: grid;
+        grid-template-columns: 90px 1fr 32px;
+        grid-template-areas:
+          "thumb title chevron"
+          "body  body  body"
+          "foot  foot  foot";
+        column-gap: 14px;
+        row-gap: 0;
+        padding: 14px;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .project-card:hover {
+        transform: none;
+      }
+
+      .project-card__thumb {
+        grid-area: thumb;
+        width: 90px;
+        height: 90px;
+        aspect-ratio: 1/1;
+        border-radius: 14px;
+      }
+
+      .project-card__thumb-bg {
+        font-size: 0.76rem;
+        text-align: center;
+        padding: 6px;
+        line-height: 1.15;
+      }
+
+      .project-card__badge {
+        display: none;
+      }
+
+      .project-card__body {
+        display: contents;
+      }
+
+      .project-card__body h3 {
+        grid-area: title;
+        align-self: center;
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.3;
+      }
+
+      .project-card__body p {
+        grid-area: body;
+        max-height: 0;
+        overflow: hidden;
+        margin: 0;
+        font-size: 0.88rem;
+        line-height: 1.6;
+        transition: max-height 360ms ease, margin-top 360ms ease;
+      }
+
+      .project-card.is-expanded .project-card__body p {
+        max-height: 400px;
+        margin-top: 14px;
+      }
+
+      .project-card__foot {
+        grid-area: foot;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        border-top: 0 solid rgba(255, 255, 255, 0.08);
+        transition: max-height 360ms ease, padding-top 360ms ease, margin-top 360ms ease;
+      }
+
+      .project-card.is-expanded .project-card__foot {
+        max-height: 80px;
+        padding-top: 12px;
+        margin-top: 14px;
+        border-top-width: 1px;
+      }
+
+      .project-card::after {
+        content: "";
+        grid-area: chevron;
+        align-self: center;
+        justify-self: center;
+        width: 26px;
+        height: 26px;
+        border-radius: 8px;
+        background-color: rgba(53, 214, 255, 0.12);
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2335d6ff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>");
+        background-size: 16px 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: transform 360ms ease, background-color 200ms ease;
+      }
+
+      .project-card.is-expanded::after {
+        transform: rotate(180deg);
+        background-color: rgba(53, 214, 255, 0.22);
+      }
     }
 
     @media (max-width: 920px) {
@@ -3531,6 +3634,15 @@
       reservationForm?.addEventListener("change", syncMailtoHref);
       syncMailtoHref();
     }
+
+    // ─── Project cards accordion (mobile only) ───
+    document.querySelectorAll(".project-card").forEach((card) => {
+      card.addEventListener("click", (e) => {
+        if (window.innerWidth > 820) return;
+        if (e.target.closest("a")) return;
+        card.classList.toggle("is-expanded");
+      });
+    });
 
     // ─── Back to top ───
     const backToTopBtn = document.getElementById("backToTop");
