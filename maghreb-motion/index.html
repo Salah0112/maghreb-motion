@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Maghreb Motion est une agence IA, web et automatisation au Maroc. Nous concevons des sites, des outils digitaux et des parcours de reservation premium pour les entreprises ambitieuses."
+    content="Maghreb Motion is an AI, web and automation agency in Morocco. We design websites, digital tools and premium service reservation journeys for ambitious companies."
   />
   <meta name="theme-color" content="#070b19" />
-  <meta property="og:title" content="Maghreb Motion | Agence IA, web &amp; automatisation au Maroc" />
+  <meta property="og:title" content="Maghreb Motion | AI, web &amp; automation agency in Morocco" />
   <meta
     property="og:description"
-    content="Une presence digitale premium inspiree du logo Maghreb Motion, avec reservation directe de services."
+    content="A premium digital presence inspired by the Maghreb Motion logo, with direct service reservations."
   />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/logo-full.png" />
-  <title>Maghreb Motion | Agence IA, web &amp; automatisation au Maroc</title>
+  <title>Maghreb Motion | AI, web &amp; automation agency in Morocco</title>
 
   <link rel="icon" type="image/png" href="assets/logo-full.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -84,28 +84,7 @@
 
     body::before,
     body::after {
-      content: "";
-      position: fixed;
-      inset: auto;
-      width: 38vw;
-      height: 38vw;
-      border-radius: 50%;
-      filter: blur(64px);
-      pointer-events: none;
-      opacity: 0.2;
-      z-index: -1;
-    }
-
-    body::before {
-      top: -14vw;
-      left: -8vw;
-      background: rgba(53, 214, 255, 0.5);
-    }
-
-    body::after {
-      right: -8vw;
-      bottom: 20vh;
-      background: rgba(196, 61, 255, 0.48);
+      display: none;
     }
 
     img,
@@ -314,33 +293,55 @@
     }
 
     .nav {
-      position: sticky;
+      position: fixed;
       top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
       z-index: 1000;
       border-bottom: 1px solid transparent;
       transition: background-color var(--ease), border-color var(--ease), box-shadow var(--ease);
     }
 
+    main {
+      padding-top: 0;
+    }
+
+    .nav,
     .nav.is-scrolled {
-      background: rgba(6, 10, 24, 0.82);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border-bottom-color: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 14px 40px rgba(3, 7, 21, 0.28);
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      border-bottom-color: transparent;
+      box-shadow: none;
     }
 
-    .nav.is-scrolled .nav__inner {
-      width: min(calc(100% - 48px), 1480px);
-      min-height: 74px;
+    .nav {
+      transition: transform 320ms ease, opacity 320ms ease;
     }
 
-    .nav__inner {
+    .nav.is-hidden {
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .nav .container.nav__inner {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 0 36px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 24px;
-      min-height: 94px;
-      transition: min-height var(--ease), width var(--ease);
+      min-height: 76px;
+    }
+
+    @media (max-width: 700px) {
+      .nav .container.nav__inner {
+        padding: 0 18px;
+      }
     }
 
     .nav__logo {
@@ -361,11 +362,14 @@
       color: rgba(238, 244, 255, 0.84);
     }
 
-    .nav__links a {
+    .nav__links a,
+    .nav__links a:visited {
       position: relative;
       font-size: 0.94rem;
       font-weight: 700;
       letter-spacing: -0.02em;
+      color: rgba(238, 244, 255, 0.92);
+      text-shadow: 0 1px 12px rgba(3, 11, 28, 0.34);
       transition: color var(--ease);
     }
 
@@ -383,8 +387,14 @@
       transition: transform var(--ease);
     }
 
-    .nav__links a:hover {
-      color: #ffffff;
+    .nav__links a:hover,
+    .nav__links a:focus-visible {
+      background-image: var(--glow);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      text-shadow: none;
     }
 
     .nav__links a:hover::after {
@@ -396,6 +406,49 @@
       display: flex;
       align-items: center;
       gap: 14px;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.06);
+      box-shadow: 0 14px 34px rgba(5, 11, 28, 0.18);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .lang-switch__button {
+      min-width: 42px;
+      height: 38px;
+      padding: 0 12px;
+      border-radius: 999px;
+      font-family: "Space Grotesk", "Segoe UI", sans-serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: rgba(238, 244, 255, 0.78);
+      transition:
+        color var(--ease),
+        background-color var(--ease),
+        transform var(--ease),
+        box-shadow var(--ease);
+    }
+
+    .lang-switch__button:hover,
+    .lang-switch__button:focus-visible {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .lang-switch__button.is-active {
+      color: #ffffff;
+      background: var(--glow);
+      box-shadow: 0 10px 26px rgba(70, 116, 255, 0.28);
     }
 
     .nav__toggle {
@@ -454,46 +507,261 @@
       filter: blur(10px);
     }
 
+    .hero {
+      position: relative;
+      padding: 110px 0 130px;
+      background: #08122a;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      display: none;
+    }
+
     .hero__layout {
       position: relative;
-      display: grid;
-      grid-template-columns: minmax(0, 0.94fr) minmax(440px, 1.06fr);
-      align-items: start;
-      gap: 32px;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
     }
 
     .hero__copy {
-      padding: 18px 0 0;
+      padding: 0;
+      text-align: center;
+      max-width: 920px;
+    }
+
+    .hero .eyebrow {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(238, 244, 255, 0.85);
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
     }
 
     .hero__copy h1 {
-      margin-top: 22px;
-      font-size: clamp(2.2rem, 5.2vw, 4.25rem);
-      line-height: 1;
-      max-width: 11ch;
+      margin-top: 32px;
+      font-size: clamp(2.6rem, 7vw, 5.6rem);
+      line-height: 1.02;
+      max-width: none;
       text-wrap: balance;
+      letter-spacing: -0.04em;
+      color: #ffffff;
     }
 
     .hero__copy h1 span {
       background: var(--glow);
+      background-size: 200% 200%;
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+      font-style: italic;
+      animation: glow-shift 6s ease-in-out infinite;
+    }
+
+    @keyframes glow-shift {
+      0%, 100% { background-position: 0% 50%; }
+      50%      { background-position: 100% 50%; }
     }
 
     .hero__copy p {
-      margin-top: 20px;
-      max-width: 52ch;
-      font-size: 0.96rem;
-      line-height: 1.7;
-      color: rgba(238, 244, 255, 0.82);
+      margin: 28px auto 0;
+      max-width: 56ch;
+      font-size: 1.08rem;
+      line-height: 1.75;
+      color: rgba(238, 244, 255, 0.7);
     }
 
     .hero__actions {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 14px;
-      margin-top: 34px;
+      margin-top: 44px;
+    }
+
+    .hero__status {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 36px;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(238, 244, 255, 0.62);
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    .hero__status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--emerald);
+      box-shadow: 0 0 0 4px rgba(65, 223, 181, 0.14);
+      animation: pulse-dot 2.4s ease-in-out infinite;
+    }
+
+    /* ─── KPI cards under the hero ─── */
+    .kpis {
+      padding: 70px 0 70px;
+    }
+
+    .kpis__bento {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .kpis__stats {
+      display: grid;
+      gap: 14px;
+    }
+
+    .kpi-feature {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 48px;
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(180deg, #ffffff, #f9fbff) padding-box,
+        linear-gradient(140deg, rgba(53, 214, 255, 0.4), rgba(255, 255, 255, 0.04), rgba(196, 61, 255, 0.4)) border-box;
+      border: 1px solid transparent;
+      box-shadow: 0 22px 52px rgba(26, 42, 77, 0.08);
+    }
+
+    .kpi-feature__label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--azure);
+    }
+
+    .kpi-feature__label::before {
+      content: "";
+      width: 26px;
+      height: 1px;
+      background: var(--azure);
+    }
+
+    .kpi-feature__title {
+      margin-top: 18px;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      line-height: 1.15;
+      color: var(--ink-dark);
+      letter-spacing: -0.02em;
+      max-width: 22ch;
+    }
+
+    .kpi-feature p {
+      margin-top: 18px;
+      color: var(--muted-dark);
+      line-height: 1.72;
+      max-width: 50ch;
+    }
+
+    .kpi-feature__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 30px;
+      padding: 13px 22px;
+      width: fit-content;
+      border-radius: var(--radius-pill);
+      background: var(--ink-dark);
+      color: #ffffff;
+      font-family: "Space Grotesk", "Segoe UI", sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      transition: transform var(--ease), box-shadow var(--ease);
+    }
+
+    .kpi-feature__cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(13, 19, 40, 0.22);
+    }
+
+    .kpi-feature__cta svg {
+      width: 16px;
+      height: 16px;
+      transition: transform var(--ease);
+    }
+
+    .kpi-feature__cta:hover svg {
+      transform: translateX(3px);
+    }
+
+    .kpi-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 28px 32px;
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(180deg, #ffffff, #f9fbff) padding-box,
+        linear-gradient(140deg, rgba(53, 214, 255, 0.4), rgba(255, 255, 255, 0.04), rgba(196, 61, 255, 0.4)) border-box;
+      border: 1px solid transparent;
+      box-shadow: 0 18px 42px rgba(26, 42, 77, 0.07);
+      transition: transform var(--ease), box-shadow var(--ease);
+    }
+
+    .kpi-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 24px 56px rgba(26, 42, 77, 0.12);
+    }
+
+    .kpi-card strong {
+      display: block;
+      font-family: "Space Grotesk", "Segoe UI", sans-serif;
+      font-size: clamp(2.2rem, 4.4vw, 3rem);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      background: var(--glow);
+      background-size: 180% 180%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .kpi-card span {
+      margin-top: 10px;
+      color: var(--muted-dark);
+      font-size: 0.94rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 920px) {
+      .kpis__bento {
+        grid-template-columns: 1fr;
+      }
+
+      .kpis__stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .kpi-feature {
+        padding: 36px 28px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .kpis__stats {
+        grid-template-columns: 1fr;
+      }
+
+      .kpi-card {
+        padding: 22px 24px;
+      }
     }
 
     .hero__chips {
@@ -1554,11 +1822,19 @@
     }
 
     .footer {
-      padding: 0 0 38px;
+      padding: 60px 0 38px;
+      background: #08122a;
     }
 
     .footer__inner {
       padding: 48px 48px 0;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+    }
+
+    .footer__inner::before {
+      display: none;
     }
 
     .footer__top {
@@ -1755,16 +2031,16 @@
       min-height: 82px;
       padding: 14px 22px;
       border-radius: 30px;
-      background: rgba(255, 255, 255, 0.88);
-      border: 1px solid rgba(116, 137, 181, 0.16);
-      box-shadow: 0 20px 54px rgba(15, 23, 42, 0.12);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+      background: transparent;
+      border: 1px solid transparent;
+      box-shadow: none;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
     }
 
     .nav.is-scrolled .nav__inner {
-      background: rgba(255, 255, 255, 0.94);
-      box-shadow: 0 22px 58px rgba(15, 23, 42, 0.16);
+      background: transparent;
+      box-shadow: none;
     }
 
     .nav__links {
@@ -1772,8 +2048,14 @@
       gap: 22px;
     }
 
-    .nav__links a:hover {
-      color: var(--ink-dark);
+    .nav__links a:hover,
+    .nav__links a:focus-visible {
+      background-image: var(--glow);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      text-shadow: none;
     }
 
     .nav__toggle {
@@ -1791,75 +2073,6 @@
 
     .nav__menu-body a {
       color: var(--ink-dark);
-    }
-
-    .hero {
-      margin: 18px 18px 0;
-      padding: 54px 0 68px;
-      border-radius: 42px;
-      background:
-        radial-gradient(circle at 14% 18%, rgba(53, 214, 255, 0.16), transparent 24%),
-        radial-gradient(circle at 88% 20%, rgba(196, 61, 255, 0.14), transparent 26%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(240, 246, 255, 0.98));
-      box-shadow: 0 34px 90px rgba(14, 24, 44, 0.18);
-      overflow: hidden;
-    }
-
-    .hero::before {
-      inset: -8% auto auto 52%;
-      width: 42vw;
-      height: 42vw;
-      background: radial-gradient(circle, rgba(120, 85, 255, 0.12) 0%, transparent 66%);
-      filter: blur(0);
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background-image:
-        linear-gradient(rgba(13, 19, 40, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(13, 19, 40, 0.03) 1px, transparent 1px);
-      background-size: 52px 52px;
-      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent 82%);
-    }
-
-    .hero__copy h1 {
-      color: var(--ink-dark);
-    }
-
-    .hero__copy p {
-      color: var(--muted-dark);
-    }
-
-    .hero .eyebrow {
-      color: rgba(13, 19, 40, 0.86);
-      background: rgba(255, 255, 255, 0.72);
-      border-color: rgba(83, 104, 149, 0.12);
-      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
-    }
-
-    .hero .eyebrow::before {
-      box-shadow: 0 0 0 6px rgba(53, 214, 255, 0.12);
-    }
-
-    .hero .btn--ghost {
-      color: var(--ink-dark);
-      background: rgba(255, 255, 255, 0.84);
-      border-color: rgba(83, 104, 149, 0.14);
-    }
-
-    .hero .btn--ghost:hover {
-      background: #ffffff;
-      border-color: rgba(83, 104, 149, 0.22);
-    }
-
-    .hero__chips span {
-      background: rgba(255, 255, 255, 0.82);
-      border-color: rgba(83, 104, 149, 0.12);
-      color: rgba(13, 19, 40, 0.78);
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
     }
 
     .band {
@@ -2154,12 +2367,26 @@
         min-height: 82px;
       }
 
+      main {
+        padding-top: 0;
+      }
+
       .nav__logo img {
         width: min(192px, 52vw);
       }
 
+      .lang-switch {
+        padding: 3px;
+      }
+
+      .lang-switch__button {
+        min-width: 38px;
+        height: 36px;
+        padding: 0 10px;
+      }
+
       .hero {
-        padding-top: 24px;
+        padding-top: 108px;
       }
 
       .hero__copy {
@@ -2484,6 +2711,246 @@
       }
     }
 
+    /* ─── LIGHT MIDDLE SECTIONS ─────────────────────── */
+    .light-zone {
+      position: relative;
+      background: linear-gradient(180deg, #ffffff 0%, #f4f7ff 100%);
+      color: var(--ink-dark);
+    }
+
+    .light-zone .section-kicker {
+      color: var(--ink-dark);
+      background: rgba(13, 19, 40, 0.05);
+      border-color: rgba(13, 19, 40, 0.08);
+    }
+
+    .light-zone .section-kicker::before {
+      box-shadow: 0 0 0 6px rgba(53, 214, 255, 0.18);
+    }
+
+    .light-zone h2,
+    .light-zone h3 {
+      color: var(--ink-dark);
+    }
+
+    .light-zone .section-head p {
+      color: var(--muted-dark);
+      opacity: 1;
+    }
+
+    /* Panels: light glass-style */
+    .light-zone .panel {
+      background:
+        linear-gradient(180deg, #ffffff, #f9fbff) padding-box,
+        linear-gradient(140deg, rgba(53, 214, 255, 0.4), rgba(255, 255, 255, 0.04), rgba(196, 61, 255, 0.38)) border-box;
+      border: 1px solid transparent;
+      box-shadow: 0 22px 52px rgba(26, 42, 77, 0.08);
+    }
+
+    .light-zone .panel::before {
+      background:
+        linear-gradient(135deg, rgba(13, 19, 40, 0.02), transparent 36%),
+        linear-gradient(180deg, transparent, rgba(13, 19, 40, 0.01));
+    }
+
+    /* KPI cards */
+    .light-zone .kpi-card span {
+      color: var(--muted-dark);
+    }
+
+    /* Service cards */
+    .light-zone .service-card h3,
+    .light-zone .service-card__content h3 {
+      color: var(--ink-dark);
+    }
+
+    .light-zone .service-card__content p,
+    .light-zone .service-card__list ul li,
+    .light-zone .service-card__note {
+      color: var(--muted-dark);
+    }
+
+    .light-zone .service-card__icon {
+      background: rgba(53, 214, 255, 0.12);
+      border-color: rgba(53, 214, 255, 0.3);
+      color: #12779c;
+    }
+
+    .light-zone .service-card__badge {
+      background: rgba(13, 19, 40, 0.06);
+      color: var(--ink-dark);
+      border-color: rgba(13, 19, 40, 0.08);
+    }
+
+    .light-zone .service-card__cta {
+      color: #12779c;
+    }
+
+    .light-zone .service-card__cta:hover {
+      color: var(--ink-dark);
+    }
+
+    .light-zone .service-card__list ul li::before {
+      color: var(--azure);
+    }
+
+    .light-zone .service-card__foot {
+      border-top-color: rgba(13, 19, 40, 0.08);
+    }
+
+    /* Process cards (Approche) */
+    .light-zone .process-card {
+      background: #ffffff;
+      border-color: rgba(83, 104, 149, 0.14);
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.06);
+    }
+
+    .light-zone .process-card h3,
+    .light-zone .process-card__index {
+      color: var(--ink-dark);
+    }
+
+    .light-zone .process-card p {
+      color: var(--muted-dark);
+    }
+
+    /* Note cards */
+    .light-zone .note-card {
+      background: #ffffff;
+      border-color: rgba(83, 104, 149, 0.14);
+    }
+
+    .light-zone .note-card strong {
+      color: var(--ink-dark);
+    }
+
+    .light-zone .note-card p {
+      color: var(--muted-dark);
+    }
+
+    /* Quote cards (Témoignages) */
+    .light-zone .quote-card p {
+      color: var(--muted-dark);
+    }
+
+    .light-zone .quote-card__person strong,
+    .light-zone .quote-card__footer strong {
+      color: var(--ink-dark);
+    }
+
+    .light-zone .quote-card__person span,
+    .light-zone .quote-card__footer span {
+      color: var(--muted-dark);
+    }
+
+    .light-zone .quote-card__footer {
+      border-top-color: rgba(13, 19, 40, 0.08);
+    }
+
+    /* Project cards (Réalisations) */
+    .light-zone .project-card {
+      background:
+        linear-gradient(180deg, #ffffff, #f9fbff) padding-box,
+        linear-gradient(140deg, rgba(53, 214, 255, 0.32), rgba(255, 255, 255, 0.04), rgba(196, 61, 255, 0.3)) border-box;
+      border: 1px solid transparent;
+    }
+
+    .light-zone .project-card__body h3 {
+      color: var(--ink-dark);
+    }
+
+    .light-zone .project-card__body p {
+      color: var(--muted-dark);
+    }
+
+    .light-zone .project-card__location {
+      color: var(--muted-dark);
+    }
+
+    .light-zone .project-card__foot {
+      border-top-color: rgba(13, 19, 40, 0.08);
+    }
+
+    .light-zone .project-card__badge {
+      background: rgba(13, 19, 40, 0.78);
+      color: #ffffff;
+      border-color: rgba(13, 19, 40, 0.5);
+    }
+
+    /* Form card (Réservation) */
+    .light-zone .form-card h3,
+    .light-zone .reservation__intro h2 {
+      color: var(--ink-dark);
+    }
+
+    .light-zone .form-card__lead,
+    .light-zone .form-card__meta {
+      color: var(--muted-dark);
+    }
+
+    .light-zone .form-card__pill {
+      background: rgba(13, 19, 40, 0.06);
+      color: var(--ink-dark);
+      border-color: rgba(13, 19, 40, 0.08);
+    }
+
+    .light-zone .field span {
+      color: var(--muted-dark);
+    }
+
+    .light-zone .field input,
+    .light-zone .field textarea,
+    .light-zone .field select {
+      background: #ffffff;
+      border-color: rgba(83, 104, 149, 0.2);
+      color: var(--ink-dark);
+    }
+
+    .light-zone .field input::placeholder,
+    .light-zone .field textarea::placeholder {
+      color: rgba(81, 96, 125, 0.6);
+    }
+
+    .light-zone .field input:focus,
+    .light-zone .field textarea:focus,
+    .light-zone .field select:focus {
+      border-color: var(--azure);
+      background: #ffffff;
+    }
+
+    .light-zone .reservation__focus {
+      background: #ffffff;
+      border-color: rgba(83, 104, 149, 0.16);
+    }
+
+    .light-zone .reservation__focus-label {
+      color: var(--muted-dark);
+    }
+
+    .light-zone .reservation__focus strong {
+      color: var(--ink-dark);
+    }
+
+    .light-zone .reservation__step strong {
+      color: var(--ink-dark);
+    }
+
+    .light-zone .reservation__step p {
+      color: var(--muted-dark);
+    }
+
+    .light-zone .reservation__mail {
+      background: rgba(13, 19, 40, 0.05);
+      color: var(--ink-dark);
+      border-color: rgba(13, 19, 40, 0.08);
+    }
+
+    /* Band section already handled, but ensure consistent */
+    .light-zone .band__inner p,
+    .light-zone .band__pills span {
+      color: var(--muted-dark);
+    }
+
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
@@ -2523,6 +2990,10 @@
       </nav>
 
       <div class="nav__actions">
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-switch__button is-active" type="button" data-lang-trigger="en" aria-pressed="true">EN</button>
+          <button class="lang-switch__button" type="button" data-lang-trigger="fr" aria-pressed="false">FR</button>
+        </div>
         <a class="btn btn--primary" href="#reservation">
           Reserver un brief
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -2560,7 +3031,6 @@
     <section class="hero">
       <div class="container hero__layout">
         <div class="hero__copy reveal">
-          <span class="eyebrow">Agence IA, web &amp; automatisation - Maroc</span>
           <h1>Des experiences digitales qui donnent plus de <span>presence</span> a votre marque.</h1>
           <p>
             Maghreb Motion con&ccedil;oit des sites web, des solutions IA et des systemes d&apos;automatisation
@@ -2577,112 +3047,47 @@
             <a class="btn btn--ghost" href="#services">Explorer les services</a>
           </div>
 
-          <div class="hero__chips" aria-label="Domaines d&apos;expertise">
-            <span>Sites premium</span>
-            <span>Applications sur mesure</span>
-            <span>IA appliquee</span>
-            <span>Automatisation interne</span>
-            <span>Acquisition digitale</span>
-          </div>
-
-          <div class="hero__support-strip" aria-label="Informations utiles">
-            <span>Disponible pour de nouveaux projets</span>
-            <span>Reponse sous 24h</span>
-            <span>Reservation directe en ligne</span>
+          <div class="hero__status">
+            <span class="hero__status-dot" aria-hidden="true"></span>
+            Disponible pour de nouveaux projets &middot; Reponse sous 24h
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="hero__stage reveal">
-          <div class="panel hero__panel hero__panel--brand">
-            <div class="hero__panel-topline">
-              <div class="hero__panel-label">Signature de marque</div>
-              <div class="hero__panel-status">Disponible pour nouveaux projets</div>
-            </div>
-            <div class="hero__metrics-board" aria-label="Apercu de l'agence">
-              <div class="hero__dashboard-heading">
-                <div>
-                  <span class="hero__metric-label">Vue d&apos;ensemble</span>
-                  <strong class="hero__dashboard-title">Une presence plus forte, plus claire et plus simple a convertir.</strong>
-                </div>
-                <span class="hero__dashboard-badge">Maroc &amp; Afrique</span>
-              </div>
+    <div class="light-zone">
 
-              <div class="hero__dashboard-grid">
-                <article class="hero__metric-main">
-                  <div>
-                    <span class="hero__metric-label">Clients accompagnes</span>
-                    <strong>78</strong>
-                  </div>
-                  <div class="hero__metric-wave">
-                    <span style="height: 32%;"></span>
-                    <span style="height: 48%;"></span>
-                    <span style="height: 61%;"></span>
-                    <span style="height: 76%;"></span>
-                    <span style="height: 58%;"></span>
-                    <span style="height: 88%;"></span>
-                  </div>
-                  <p>Des marques, PME et equipes accompagnees sur des besoins web, IA et automatisation.</p>
-                </article>
+    <section class="kpis">
+      <div class="container">
+        <div class="kpis__bento">
 
-                <div>
-                  <article class="hero__metric-chart">
-                    <div class="hero__metric-chart-head">
-                      <div>
-                        <span class="hero__metric-label">Demandes recentes</span>
-                        <strong>+32%</strong>
-                      </div>
-                      <span class="hero__chart-chip">30 jours</span>
-                    </div>
-                    <div class="hero__chart-bars">
-                      <span style="--h: 26%;"></span>
-                      <span style="--h: 38%;"></span>
-                      <span style="--h: 52%;"></span>
-                      <span style="--h: 44%;"></span>
-                      <span style="--h: 67%;"></span>
-                      <span style="--h: 74%;"></span>
-                      <span style="--h: 92%;"></span>
-                    </div>
-                    <div class="hero__chart-labels">
-                      <span>Lun</span>
-                      <span>Mar</span>
-                      <span>Mer</span>
-                      <span>Jeu</span>
-                      <span>Ven</span>
-                      <span>Sam</span>
-                      <span>Dim</span>
-                    </div>
-                  </article>
+          <article class="kpi-feature reveal">
+            <span class="kpi-feature__label">Notre force</span>
+            <h3 class="kpi-feature__title">Une equipe technique compacte qui livre vite et juste.</h3>
+            <p>Web, IA, automatisation et acquisition &mdash; quatre piliers maitrises pour vous aider a passer un cap reel, sans detour ni promesse vide.</p>
+            <a class="kpi-feature__cta" href="#services">
+              Decouvrir nos services
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </a>
+          </article>
 
-                  <div class="hero__metric-stack">
-                    <article class="hero__metric-card hero__metric-card--accent">
-                      <span class="hero__metric-label">Projets lances</span>
-                      <strong>120+</strong>
-                      <p>Sites, automatisations et campagnes actives sur plusieurs secteurs.</p>
-                    </article>
-                    <article class="hero__metric-card">
-                      <span class="hero__metric-label">Premier retour</span>
-                      <strong>24h</strong>
-                      <p>Une premiere orientation rapide pour avancer sans perdre de temps.</p>
-                    </article>
-                    <article class="hero__metric-card hero__metric-card--wide">
-                      <span class="hero__metric-label">Satisfaction client</span>
-                      <strong>4.9/5</strong>
-                      <p>Un accompagnement reactif, une lecture claire et des decisions plus simples a prendre.</p>
-                    </article>
-                  </div>
-                </div>
-              </div>
-
-              <div class="hero__dashboard-footer">
-                <div class="hero__dashboard-tags">
-                  <span>Web premium</span>
-                  <span>IA appliquee</span>
-                  <span>Automatisation</span>
-                  <span>Acquisition digitale</span>
-                </div>
-              </div>
-            </div>
+          <div class="kpis__stats">
+            <article class="kpi-card reveal">
+              <strong data-kpi>78+</strong>
+              <span>Clients accompagnes</span>
+            </article>
+            <article class="kpi-card reveal">
+              <strong data-kpi>120+</strong>
+              <span>Projets livres</span>
+            </article>
+            <article class="kpi-card reveal">
+              <strong data-kpi>24h</strong>
+              <span>Premier retour</span>
+            </article>
           </div>
+
         </div>
       </div>
     </section>
@@ -3178,6 +3583,7 @@
             <input type="hidden" name="subject" id="reservationSubject" value="Nouvelle reservation - Maghreb Motion" />
             <input type="hidden" name="from_name" value="Maghreb Motion Website" />
             <input type="hidden" name="replyto" id="replyToField" value="" />
+            <input type="hidden" name="Reservation Summary" id="reservationSummary" value="" />
             <input class="sr-only" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" />
 
             <div class="form-grid">
@@ -3280,6 +3686,8 @@
         </div>
       </div>
     </section>
+
+    </div>
   </main>
 
   <footer class="footer" id="contact">
@@ -3385,9 +3793,12 @@
     const mailtoFallback = document.getElementById("mailtoFallback");
     const submitButton = document.getElementById("submitButton");
 
+    const heroEl = document.querySelector(".hero");
     const setScrolledNav = () => {
       if (!nav) return;
       nav.classList.toggle("is-scrolled", window.scrollY > 12);
+      const heroBottom = heroEl ? heroEl.offsetTop + heroEl.offsetHeight - 80 : 600;
+      nav.classList.toggle("is-hidden", window.scrollY > heroBottom);
     };
 
     const toggleMenu = (forceState) => {
@@ -3602,7 +4013,7 @@
         },
         { threshold: 0.5 }
       );
-      document.querySelectorAll(".hero__metric-main strong, .hero__metric-card strong").forEach((el) => {
+      document.querySelectorAll("[data-kpi]").forEach((el) => {
         counterObserver.observe(el);
       });
     }
@@ -3708,5 +4119,6 @@
       });
     }
   </script>
+  <script src="site.js"></script>
 </body>
 </html>
