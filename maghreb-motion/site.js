@@ -86,12 +86,12 @@
     fullName: "Nom complet",
     email: "Email",
     company: "Entreprise",
-    phone: "Telephone / WhatsApp",
-    service: "Service demande",
-    budget: "Budget estime",
-    date: "Date souhaitee",
-    time: "Moment prefere",
-    timeline: "Delai souhaite",
+    phone: "T?l?phone / WhatsApp",
+    service: "Service demand?",
+    budget: "Budget estim?",
+    date: "Date souhait?e",
+    time: "Moment pr?f?r?",
+    timeline: "D?lai souhait?",
     brief: "Brief du projet"
   };
 
@@ -99,12 +99,12 @@
     fullName: reservationForm.querySelector('input[name="Nom complet"]'),
     email: reservationForm.querySelector('input[name="Email"]'),
     company: reservationForm.querySelector('input[name="Entreprise"]'),
-    phone: reservationForm.querySelector('input[name="Telephone / WhatsApp"]'),
-    service: reservationForm.querySelector('select[name="Service demande"]'),
-    budget: reservationForm.querySelector('select[name="Budget estime"]'),
-    date: reservationForm.querySelector('input[name="Date souhaitee"]'),
-    time: reservationForm.querySelector('input[name="Moment prefere"]'),
-    timeline: reservationForm.querySelector('select[name="Delai souhaite"]'),
+    phone: reservationForm.querySelector('input[name="T?l?phone / WhatsApp"]'),
+    service: reservationForm.querySelector('select[name="Service demand?"]'),
+    budget: reservationForm.querySelector('select[name="Budget estim?"]'),
+    date: reservationForm.querySelector('input[name="Date souhait?e"]'),
+    time: reservationForm.querySelector('input[name="Moment pr?f?r?"]'),
+    timeline: reservationForm.querySelector('select[name="D?lai souhait?"]'),
     brief: reservationForm.querySelector('textarea[name="Brief du projet"]')
   };
 
@@ -137,7 +137,7 @@
       },
       nav: {
         aria: "Main navigation",
-        links: ["Services", "Approach", "Testimonials", "Projects", "Team", "Reservation", "Contact"],
+        links: ["Services", "Approach", "Testimonials", "Projects", "Team", "R?servation", "Contact"],
         cta: "Book a brief",
         mobileCta: "Start your reservation",
         openMenu: "Open menu",
@@ -202,7 +202,7 @@
               "Client, sales and reservation management from one central space.",
               "Dashboards and reporting tools to steer decisions with clarity."
             ],
-            note: "CRM, operations, dashboards",
+            note: "CRM, op?rations, dashboards",
             cta: "Book this service",
             serviceValue: "Custom CRM / business tool"
           },
@@ -307,7 +307,7 @@
           },
           {
             badge: "Web + AI",
-            title: "Beaute Ideale",
+            title: "Beaut? Id?ale",
             body: "Premium e-commerce store for a cosmetics brand, with a WhatsApp chatbot for support and automated product recommendations.",
             city: "Rabat"
           },
@@ -337,7 +337,7 @@
         body: "Complementary profiles that connect strategy, technical execution and growth."
       },
       reservation: {
-        kicker: "Reservation",
+        kicker: "R?servation",
         title: "Tell us about your project.",
         body: "A few details are enough to help us understand your needs and get back to you with an initial direction.",
         focusLabel: "Selected service",
@@ -409,7 +409,7 @@
         ctas: ["Start a project", "View services"],
         navLabel: "Navigation",
         contactLabel: "Contact",
-        navLinks: ["Services", "Approach", "Testimonials", "Projects", "Team", "Reservation", "Back to top"],
+        navLinks: ["Services", "Approach", "Testimonials", "Projects", "Team", "R?servation", "Back to top"],
         navAria: "Useful links",
         copyright: "© 2026 Maghreb Motion. All rights reserved.",
         badge: "Available for new projects"
@@ -427,7 +427,7 @@
       },
       mail: {
         subjectPrefix: "New inquiry",
-        fallbackService: "Reservation",
+        fallbackService: "R?servation",
         fallbackName: "Lead",
         heading: "NEW INQUIRY - MAGHREB MOTION",
         customerInfo: "CLIENT INFORMATION",
@@ -454,51 +454,51 @@
         title: "Maghreb Motion | Agence IA, web & automatisation au Maroc",
         description: "Maghreb Motion est une agence IA, web et automatisation au Maroc. Nous concevons des sites, des outils digitaux et des parcours de reservation premium pour les entreprises ambitieuses.",
         ogTitle: "Maghreb Motion | Agence IA, web & automatisation au Maroc",
-        ogDescription: "Une presence digitale premium inspiree du logo Maghreb Motion, avec reservation directe de services."
+        ogDescription: "Une pr?sence digitale premium inspir?e du logo Maghreb Motion, avec r?servation directe de services."
       },
       nav: {
         aria: "Navigation principale",
-        links: ["Services", "Approche", "Temoignages", "Realisations", "Equipe", "Reservation", "Contact"],
-        cta: "Reserver un brief",
-        mobileCta: "Demarrer la reservation",
+        links: ["Services", "Approche", "T?moignages", "R?alisations", "?quipe", "R?servation", "Contact"],
+        cta: "R?server un brief",
+        mobileCta: "D?marrer la r?servation",
         openMenu: "Ouvrir le menu",
         closeMenu: "Fermer le menu",
         languageLabel: "Choix de langue"
       },
       hero: {
-        title: 'Des experiences digitales qui donnent plus de <span>presence</span> a votre marque.',
-        body: "Maghreb Motion concoit des sites web, des solutions IA et des systemes d'automatisation pour aider les entreprises ambitieuses a mieux se presenter, mieux vendre et mieux operer.",
-        primaryCta: "Reserver un service",
+        title: 'Des exp?riences digitales qui donnent plus de <span>pr?sence</span> ? votre marque.',
+        body: "Maghreb Motion con?oit des sites web, des solutions IA et des syst?mes d'automatisation pour aider les entreprises ambitieuses ? mieux se pr?senter, mieux vendre et mieux op?rer.",
+        primaryCta: "R?server un service",
         secondaryCta: "Explorer les services",
-        status: "Disponible pour de nouveaux projets - reponse sous 24h"
+        status: "Disponible pour de nouveaux projets - r?ponse sous 24h"
       },
       kpis: {
         label: "Notre force",
-        title: "Une equipe technique compacte qui livre vite et juste.",
-        body: "Web, IA, automatisation et acquisition - quatre piliers maitrises pour vous aider a passer un cap reel, sans detour ni promesse vide.",
-        cta: "Decouvrir nos services",
-        stats: ["Clients accompagnes", "Projets livres", "Premier retour"]
+        title: "Une ?quipe technique compacte qui livre vite et juste.",
+        body: "Web, IA, automatisation et acquisition - quatre piliers ma?tris?s pour vous aider ? passer un cap r?el, sans d?tour ni promesse vide.",
+        cta: "D?couvrir nos services",
+        stats: ["Clients accompagn?s", "Projets livr?s", "Premier retour"]
       },
       band: {
-        text: "Nous aidons les entreprises a passer d'une presence digitale floue a une image plus claire, plus credible et plus performante.",
-        pills: ["Maroc & Afrique", "IA appliquee", "Automatisation", "Sur mesure"]
+        text: "Nous aidons les entreprises ? passer d'une pr?sence digitale floue ? une image plus claire, plus cr?dible et plus performante.",
+        pills: ["Maroc & Afrique", "IA appliqu?e", "Automatisation", "Sur mesure"]
       },
       services: {
         kicker: "Services",
-        title: "Quatre poles pour construire, automatiser et faire grandir votre presence digitale.",
-        body: "Du site de presentation a l'automatisation interne, nous construisons des solutions concretes, lisibles et utiles a la croissance de votre entreprise.",
+        title: "Quatre p?les pour construire, automatiser et faire grandir votre pr?sence digitale.",
+        body: "Du site de pr?sentation ? l'automatisation interne, nous construisons des solutions concr?tes, lisibles et utiles ? la croissance de votre entreprise.",
         cards: [
           {
             badge: "Web",
             title: "Sites web & applications",
-            body: "Des experiences rapides, haut de gamme et pensees pour inspirer confiance des le premier scroll.",
+            body: "Des exp?riences rapides, haut de gamme et pens?es pour inspirer confiance d?s le premier scroll.",
             items: [
-              "Site vitrine professionnel pour presentation, credibilite et conversion.",
-              "Boutique e-commerce claire, mobile-first et orientee achat.",
-              "Application web sur mesure pour vos operations ou services clients."
+              "Site vitrine professionnel pour pr?sentation, cr?dibilit? et conversion.",
+              "Boutique e-commerce claire, mobile-first et orient?e achat.",
+              "Application web sur mesure pour vos op?rations ou services clients."
             ],
             note: "Vitrine, e-commerce, application",
-            cta: "Reserver ce service",
+            cta: "R?server ce service",
             serviceValue: "Professional showcase website"
           },
           {
@@ -506,182 +506,182 @@
             title: "Solutions d'intelligence artificielle",
             body: "Des usages concrets de l'IA qui font gagner du temps, fluidifient la relation client et structurent l'information.",
             items: [
-              "Chatbot WhatsApp ou site web pour repondre sans friction.",
-              "Automatisation du support client et des demandes recurrentes.",
-              "Analyse, tri et extraction de donnees depuis vos documents."
+              "Chatbot WhatsApp ou site web pour r?pondre sans friction.",
+              "Automatisation du support client et des demandes r?currentes.",
+              "Analyse, tri et extraction de donn?es depuis vos documents."
             ],
             note: "Bots, support, documents",
-            cta: "Reserver ce service",
+            cta: "R?server ce service",
             serviceValue: "WhatsApp / website chatbot"
           },
           {
-            badge: "Systemes",
-            title: "Automatisation & outils metier",
-            body: "Des flux de travail plus propres, moins de repetition et des outils qui suivent votre realite terrain.",
+            badge: "Syst?mes",
+            title: "Automatisation & outils m?tier",
+            body: "Des flux de travail plus propres, moins de r?p?tition et des outils qui suivent votre r?alit? terrain.",
             items: [
-              "CRM sur mesure adapte a votre cycle commercial.",
-              "Gestion clients, ventes et reservations depuis un seul espace.",
+              "CRM sur mesure adapt? ? votre cycle commercial.",
+              "Gestion clients, ventes et r?servations depuis un seul espace.",
               "Dashboards et reporting pour piloter sans zone grise."
             ],
-            note: "CRM, operations, dashboards",
-            cta: "Reserver ce service",
+            note: "CRM, op?rations, dashboards",
+            cta: "R?server ce service",
             serviceValue: "Custom CRM / business tool"
           },
           {
             badge: "Croissance",
             title: "Marketing digital & acquisition",
-            body: "Des campagnes et systemes de lead generation qui relient le design, l'offre et la conversion.",
+            body: "Des campagnes et syst?mes de lead generation qui relient le design, l'offre et la conversion.",
             items: [
-              "Publicite Meta et Google Ads avec angles de conversion clairs.",
-              "Creation de contenu marketing adapte a votre positioning.",
-              "Systemes de generation de leads et suivi commercial automatise."
+              "Publicit? Meta et Google Ads avec angles de conversion clairs.",
+              "Cr?ation de contenu marketing adapt?e ? votre positionnement.",
+              "Syst?mes de g?n?ration de leads et suivi commercial automatis?."
             ],
             note: "Ads, contenu, leads",
-            cta: "Reserver ce service",
+            cta: "R?server ce service",
             serviceValue: "Meta / Google Ads"
           }
         ]
       },
       approach: {
         kicker: "Approche",
-        title: "Un processus net pour passer de l'idee au systeme en production.",
-        body: "Nous commencons par clarifier le besoin, puis nous construisons une reponse simple, priorisee et executable.",
+        title: "Un processus net pour passer de l'id?e au syst?me en production.",
+        body: "Nous commen?ons par clarifier le besoin, puis nous construisons une r?ponse simple, prioris?e et ex?cutable.",
         steps: [
           {
             title: "Diagnostic",
-            body: "Nous cadrons le besoin, la cible, les blocages actuels et la meilleure porte d'entree produit."
+            body: "Nous cadrons le besoin, la cible, les blocages actuels et la meilleure porte d'entr?e produit."
           },
           {
             title: "Direction",
-            body: "Nous posons une proposition claire: structure du site, experience, outil ou automatisation a prioriser."
+            body: "Nous posons une proposition claire : structure du site, exp?rience, outil ou automatisation ? prioriser."
           },
           {
             title: "Production",
-            body: "Nous livrons un design premium et un systeme propre, rapide et aligne avec l'image de l'agence."
+            body: "Nous livrons un design premium et un syst?me propre, rapide et align? avec l'image de l'agence."
           },
           {
             title: "Optimisation",
-            body: "Nous observons les retours, affinons le parcours et renforcons ce qui convertit le mieux."
+            body: "Nous observons les retours, affinons le parcours et renfor?ons ce qui convertit le mieux."
           }
         ],
         notes: [
           {
-            title: "Une identite qui marque davantage",
+            title: "Une identit? qui marque davantage",
             body: "Un design plus juste renforce la perception de votre entreprise et la confiance au premier contact."
           },
           {
             title: "Une offre mieux comprise",
-            body: "Nous organisons le contenu pour que le visiteur identifie vite ce que vous faites et a qui cela s'adresse."
+            body: "Nous organisons le contenu pour que le visiteur identifie vite ce que vous faites et ? qui cela s'adresse."
           },
           {
             title: "Un parcours plus direct",
-            body: "Les bons appels a l'action reduisent les hesitations et facilitent la prise de contact."
+            body: "Les bons appels ? l'action r?duisent les h?sitations et facilitent la prise de contact."
           }
         ]
       },
       voices: {
-        kicker: "Temoignages",
-        title: "Quelques retours de clients accompagnes sur des sujets web, IA et croissance.",
-        body: "Une presentation simple, humaine et rassurante pour montrer l'impact du travail realise.",
+        kicker: "T?moignages",
+        title: "Quelques retours de clients accompagn?s sur des sujets web, IA et croissance.",
+        body: "Une pr?sentation simple, humaine et rassurante pour montrer l'impact du travail r?alis?.",
         starsLabel: "5 sur 5",
         quotes: [
           {
             name: "Meryem A.",
             role: "Fondatrice, marque beauty",
-            text: "Le positionnement est plus clair, le site inspire davantage confiance et nos premiers echanges commerciaux sont bien meilleurs.",
-            label: "Site vitrine & identite digitale",
+            text: "Le positionnement est plus clair, le site inspire davantage confiance et nos premiers ?changes commerciaux sont bien meilleurs.",
+            label: "Site vitrine & identit? digitale",
             city: "Casablanca"
           },
           {
             name: "Karim L.",
-            role: "Directeur operations, logistique",
-            text: "Nous avions besoin de fluidite. L'automatisation mise en place a simplifie le traitement interne et nous a fait gagner un temps reel.",
+            role: "Directeur op?rations, logistique",
+            text: "Nous avions besoin de fluidit?. L'automatisation mise en place a simplifi? le traitement interne et nous a fait gagner un temps r?el.",
             label: "IA & automatisation",
             city: "Rabat"
           },
           {
             name: "Salma N.",
-            role: "Responsable developpement, B2B",
-            text: "J'ai aime l'equilibre entre design, clarte et execution. On sent une equipe qui comprend autant l'image que les enjeux business.",
+            role: "Responsable d?veloppement, B2B",
+            text: "J'ai aim? l'?quilibre entre design, clart? et ex?cution. On sent une ?quipe qui comprend autant l'image que les enjeux business.",
             label: "Acquisition & parcours de conversion",
             city: "Marrakech"
           }
         ]
       },
       projects: {
-        kicker: "Realisations",
+        kicker: "R?alisations",
         title: "Quelques projets que nous avons construits pour nos clients.",
-        body: "Des sites, systemes et outils livres pour des entreprises marocaines et africaines aux besoins varies.",
+        body: "Des sites, syst?mes et outils livr?s pour des entreprises marocaines et africaines aux besoins vari?s.",
         cta: "Projet similaire",
         items: [
           {
             badge: "Web",
             title: "Dar Zitoun",
-            body: "Site vitrine haut de gamme pour un restaurant de luxe a Marrakech, avec systeme de reservation en ligne integre et experience immersive.",
+            body: "Site vitrine haut de gamme pour un restaurant de luxe ? Marrakech, avec syst?me de r?servation en ligne int?gr? et exp?rience immersive.",
             city: "Marrakech"
           },
           {
-            badge: "Systemes",
+            badge: "Syst?mes",
             title: "LogiPro Dashboard",
-            body: "CRM sur mesure et tableau de bord operationnel pour une entreprise logistique : suivi des livraisons, gestion des clients et reporting en temps reel.",
+            body: "CRM sur mesure et tableau de bord op?rationnel pour une entreprise logistique : suivi des livraisons, gestion des clients et reporting en temps r?el.",
             city: "Casablanca"
           },
           {
             badge: "Web + IA",
-            title: "Beaute Ideale",
-            body: "Boutique e-commerce premium pour une marque cosmetiques, avec chatbot WhatsApp pour le support client et recommandations produit automatisees.",
+            title: "Beaut? Id?ale",
+            body: "Boutique e-commerce premium pour une marque de cosm?tiques, avec chatbot WhatsApp pour le support client et recommandations produit automatis?es.",
             city: "Rabat"
           },
           {
             badge: "Web",
             title: "Atlas Invest",
-            body: "Site institutionnel premium pour un cabinet d'investissement : identite digitale soignee, presentation des fonds et parcours de prise de contact optimise.",
+            body: "Site institutionnel premium pour un cabinet d'investissement : identit? digitale soign?e, pr?sentation des fonds et parcours de prise de contact optimis?.",
             city: "Casablanca"
           },
           {
             badge: "IA",
             title: "MedConnect",
-            body: "Automatisation complete des rendez-vous medicaux : chatbot de pre-qualification, rappels automatiques et dossier patient simplifie pour une clinique privee.",
+            body: "Automatisation compl?te des rendez-vous m?dicaux : chatbot de pr?-qualification, rappels automatiques et dossier patient simplifi? pour une clinique priv?e.",
             city: "Rabat"
           },
           {
             badge: "Croissance",
             title: "GrowthLab MA",
-            body: "Systeme complet de generation de leads pour une agence B2B : campagnes Meta Ads, landing pages optimisees et pipeline commercial automatise avec reporting hebdo.",
+            body: "Syst?me complet de g?n?ration de leads pour une agence B2B : campagnes Meta Ads, landing pages optimis?es et pipeline commercial automatis? avec reporting hebdo.",
             city: "Casablanca"
           }
         ]
       },
       team: {
-        kicker: "Equipe",
-        title: "Une equipe compacte, technique et orientee resultat.",
-        body: "Des profils complementaires pour relier strategie, execution technique et croissance."
+        kicker: "?quipe",
+        title: "Une ?quipe compacte, technique et orient?e r?sultat.",
+        body: "Des profils compl?mentaires pour relier strat?gie, ex?cution technique et croissance."
       },
       reservation: {
-        kicker: "Reservation",
+        kicker: "R?servation",
         title: "Parlez-nous de votre projet.",
-        body: "Quelques informations suffisent pour nous aider a comprendre votre besoin et vous recontacter avec une premiere orientation.",
+        body: "Quelques informations suffisent pour nous aider ? comprendre votre besoin et vous recontacter avec une premi?re orientation.",
         focusLabel: "Service choisi",
-        focusDefault: "Selectionnez le service qui correspond a votre besoin",
+        focusDefault: "S?lectionnez le service qui correspond ? votre besoin",
         steps: [
           "Choisissez le service le plus proche de votre besoin.",
-          "Partagez votre contexte, votre budget et le delai souhaite.",
-          "Notre equipe etudie votre demande et revient vers vous rapidement."
+          "Partagez votre contexte, votre budget et le d?lai souhait?.",
+          "Notre ?quipe ?tudie votre demande et revient vers vous rapidement."
         ],
-        mail: "Reponse sous 24h ouvrables",
+        mail: "R?ponse sous 24h ouvrables",
         formTitle: "Demande de projet",
-        formLead: "Remplissez ce brief rapide pour recevoir un premier retour adapte a votre besoin.",
+        formLead: "Remplissez ce brief rapide pour recevoir un premier retour adapt? ? votre besoin.",
         formPill: "Premier contact",
         labels: {
           fullName: "Nom complet",
           email: "E-mail",
           company: "Entreprise",
-          phone: "Telephone / WhatsApp",
-          service: "Service demande",
-          budget: "Budget estime",
-          date: "Date souhaitee",
-          time: "Moment prefere",
-          timeline: "Delai souhaite",
+          phone: "T?l?phone / WhatsApp",
+          service: "Service demand?",
+          budget: "Budget estim?",
+          date: "Date souhait?e",
+          time: "Moment pr?f?r?",
+          timeline: "D?lai souhait?",
           brief: "Brief du projet"
         },
         placeholders: {
@@ -689,8 +689,8 @@
           email: "vous@entreprise.com",
           company: "Nom de l'entreprise",
           phone: "+212 ...",
-          time: "Ex: matin, 14h00, apres 17h",
-          brief: "Dites-nous ce que vous voulez lancer, ameliorer ou automatiser."
+          time: "Ex : matin, 14h00, apr?s 17h",
+          brief: "Dites-nous ce que vous voulez lancer, am?liorer ou automatiser."
         },
         servicePlaceholder: "Choisir un service",
         serviceOptions: [
@@ -700,39 +700,39 @@
           { value: "WhatsApp / website chatbot", label: "Chatbot WhatsApp / site web" },
           { value: "Customer support automation", label: "Automatisation du support client" },
           { value: "Document analysis and processing", label: "Analyse et traitement de documents" },
-          { value: "Custom CRM / business tool", label: "CRM / outil metier sur mesure" },
-          { value: "Client, sales and reservation management", label: "Gestion clients, ventes & reservations" },
+          { value: "Custom CRM / business tool", label: "CRM / outil m?tier sur mesure" },
+          { value: "Client, sales and reservation management", label: "Gestion clients, ventes & r?servations" },
           { value: "Dashboard and reporting", label: "Dashboard & reporting" },
-          { value: "Meta / Google Ads", label: "Publicite Meta / Google Ads" },
-          { value: "Automated lead generation", label: "Generation de leads automatisee" },
-          { value: "Digital audit and strategy", label: "Audit & strategie digitale" }
+          { value: "Meta / Google Ads", label: "Publicit? Meta / Google Ads" },
+          { value: "Automated lead generation", label: "G?n?ration de leads automatis?e" },
+          { value: "Digital audit and strategy", label: "Audit & strat?gie digitale" }
         ],
-        budgetPlaceholder: "Selectionner une fourchette",
+        budgetPlaceholder: "S?lectionner une fourchette",
         budgetOptions: [
           { value: "Under 5,000 MAD", label: "Moins de 5 000 MAD" },
           { value: "5,000 - 15,000 MAD", label: "5 000 - 15 000 MAD" },
           { value: "15,000 - 40,000 MAD", label: "15 000 - 40 000 MAD" },
           { value: "40,000 MAD and above", label: "40 000 MAD et plus" }
         ],
-        timelinePlaceholder: "Selectionner un delai",
+        timelinePlaceholder: "S?lectionner un d?lai",
         timelineOptions: [
           { value: "Urgent - under 7 days", label: "Urgent - moins de 7 jours" },
-          { value: "2 to 3 weeks", label: "2 a 3 semaines" },
-          { value: "1 to 2 months", label: "1 a 2 mois" },
-          { value: "To be defined", label: "A definir" }
+          { value: "2 to 3 weeks", label: "2 ? 3 semaines" },
+          { value: "1 to 2 months", label: "1 ? 2 mois" },
+          { value: "To be defined", label: "? d?finir" }
         ],
-        submit: "Envoyer la reservation",
-        meta: "Vos informations sont utilisees uniquement pour traiter votre demande. Notre equipe vous repond dans les meilleurs delais.",
+        submit: "Envoyer la r?servation",
+        meta: "Vos informations sont utilis?es uniquement pour traiter votre demande. Notre ?quipe vous r?pond dans les meilleurs d?lais.",
         fallback: "Contacter directement l'agence"
       },
       footer: {
-        brand: "Sites web, IA appliquee, automatisation et acquisition pour les entreprises qui veulent passer un cap avec une image plus forte et des outils plus utiles.",
-        ctas: ["Demarrer un projet", "Voir les services"],
+        brand: "Sites web, IA appliqu?e, automatisation et acquisition pour les entreprises qui veulent passer un cap avec une image plus forte et des outils plus utiles.",
+        ctas: ["D?marrer un projet", "Voir les services"],
         navLabel: "Navigation",
         contactLabel: "Contact",
-        navLinks: ["Services", "Approche", "Temoignages", "Realisations", "Equipe", "Reservation", "Retour en haut"],
+        navLinks: ["Services", "Approche", "T?moignages", "R?alisations", "?quipe", "R?servation", "Retour en haut"],
         navAria: "Liens utiles",
-        copyright: "© 2026 Maghreb Motion. Tous droits reserves.",
+        copyright: "© 2026 Maghreb Motion. Tous droits r?serv?s.",
         badge: "Disponible pour de nouveaux projets"
       },
       misc: {
@@ -740,32 +740,32 @@
         backToTop: "Retour en haut de page"
       },
       feedback: {
-        notConfigured: "Le formulaire n'est pas encore configure. Merci de nous contacter directement par e-mail.",
-        localFile: "Le formulaire doit etre ouvert via un serveur web pour fonctionner correctement.",
+        notConfigured: "Le formulaire n'est pas encore configur?. Merci de nous contacter directement par e-mail.",
+        localFile: "Le formulaire doit ?tre ouvert via un serveur web pour fonctionner correctement.",
         sending: "Envoi en cours...",
-        success: "Merci, votre demande a bien ete envoyee. Notre equipe vous recontacte rapidement.",
-        error: "Une erreur est survenue pendant l'envoi. Merci de reessayer ou de nous contacter directement par e-mail."
+        success: "Merci, votre demande a bien ?t? envoy?e. Notre ?quipe vous recontacte rapidement.",
+        error: "Une erreur est survenue pendant l'envoi. Merci de r?essayer ou de nous contacter directement par e-mail."
       },
       mail: {
-        subjectPrefix: "Nouvelle reservation",
-        fallbackService: "Reservation",
+        subjectPrefix: "Nouvelle r?servation",
+        fallbackService: "R?servation",
         fallbackName: "Prospect",
-        heading: "NOUVELLE RESERVATION - MAGHREB MOTION",
+        heading: "NOUVELLE R?SERVATION - MAGHREB MOTION",
         customerInfo: "INFORMATIONS CLIENT",
-        projectDetails: "DETAILS DU PROJET",
+        projectDetails: "D?TAILS DU PROJET",
         projectBrief: "BRIEF DU PROJET",
-        directTitle: "Nouvelle reservation Maghreb Motion",
+        directTitle: "Nouvelle r?servation Maghreb Motion",
         noValue: "-",
         labels: {
           fullName: "Nom complet",
           email: "E-mail",
           company: "Entreprise",
-          phone: "Telephone / WhatsApp",
-          service: "Service demande",
-          budget: "Budget estime",
-          date: "Date souhaitee",
-          time: "Moment prefere",
-          timeline: "Delai souhaite",
+          phone: "T?l?phone / WhatsApp",
+          service: "Service demand?",
+          budget: "Budget estim?",
+          date: "Date souhait?e",
+          time: "Moment pr?f?r?",
+          timeline: "D?lai souhait?",
           brief: "Brief du projet"
         }
       }
@@ -864,7 +864,7 @@
     replyToField.value = visitorEmail.value.trim();
   };
 
-  const updateReservationSummary = () => {
+  const updateR?servationSummary = () => {
     if (!reservationSummary) return;
     const data = new FormData(reservationForm);
     const t = translations[currentLanguage];
@@ -1083,7 +1083,7 @@
     updateSelectedService();
     updateSubject();
     updateReplyTo();
-    updateReservationSummary();
+    updateR?servationSummary();
     if (mailtoFallback) {
       mailtoFallback.href = buildMailtoHref();
     }
@@ -1092,11 +1092,11 @@
     }
   };
 
-  const syncReservationState = () => {
+  const syncR?servationState = () => {
     updateSelectedService();
     updateSubject();
     updateReplyTo();
-    updateReservationSummary();
+    updateR?servationSummary();
     if (mailtoFallback) {
       mailtoFallback.href = buildMailtoHref();
     }
@@ -1112,16 +1112,16 @@
     window.requestAnimationFrame(updateNavToggleLabel);
   });
 
-  serviceSelect?.addEventListener("change", syncReservationState);
-  reservationForm.addEventListener("input", syncReservationState);
-  reservationForm.addEventListener("change", syncReservationState);
+  serviceSelect?.addEventListener("change", syncR?servationState);
+  reservationForm.addEventListener("input", syncR?servationState);
+  reservationForm.addEventListener("change", syncR?servationState);
 
   serviceTriggers.forEach((trigger) => {
     trigger.addEventListener("click", () => {
       const selected = trigger.getAttribute("data-service");
       if (!selected || !serviceSelect) return;
       serviceSelect.value = selected;
-      syncReservationState();
+      syncR?servationState();
     });
   });
 
@@ -1133,7 +1133,7 @@
 
   reservationForm.addEventListener("submit", async (event) => {
     event.preventDefault();
-    syncReservationState();
+    syncR?servationState();
 
     if (window.location.protocol === "file:") {
       setFeedbackState("localFile", "warning");
